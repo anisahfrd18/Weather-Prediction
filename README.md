@@ -1,128 +1,112 @@
-🌤️ Weather Prediction Dashboard
-📌 Project Overview
-The Weather Prediction Dashboard is a machine learning-based system that forecasts weather conditions—such as temperature and weather codes—for Delhi and Mumbai using historical data and real-time API integration. The predictions are visualized through an interactive dashboard built with NocoDB.
+# DS-1
 
-By combining real-time data with historical trends, users can track, analyze, and visualize weather patterns, enabling better planning and decision-making.
+# **Weather Prediction Dashboard**
 
-💡 Why It Matters
-📅 Forecast Planning: Helps users plan activities based on weather conditions.
+## **Project Overview**
+This project is a **Weather Prediction System** that uses machine learning to predict weather conditions (such as temperature and weather code) based on various meteorological features. It processes historical weather data for two major cities, **Delhi** and **Mumbai**, using the **Random Forest** algorithm. 
 
-📊 Data Visualization: Tracks real-time forecasts and compares them with historical data.
+By integrating **real-time weather predictions** with historical data, this system enables users to view weather trends and predictions through an interactive dashboard. The dashboard is powered by **NocoDB**, a no-code platform that visualizes and stores weather data, enabling users to track real-time and historical weather patterns.
 
-⚡ Live Updates: Offers current conditions through API integration.
+### Why It Matters
+- The system provides **predictive insights** on weather, allowing users to plan ahead for various activities based on temperature and conditions.
+- It allows **real-time weather forecasting** and data visualization, helping users keep track of the latest forecasts and compare them with historical trends.
 
-🔑 Key Features & Technologies
-✨ Key Features:
-Weather Prediction: Machine learning models trained on historical weather data to predict future conditions.
+---
 
-Real-Time Forecasting: Uses the Visual Crossing API to fetch live weather data.
+## **Key Features & Technologies**
 
-Historical Analysis: Trained on past data from Open-Meteo for accurate trend analysis.
+### **Key Features**:
+- **Weather Prediction**: Utilizes historical weather data and machine learning models to predict temperature and weather conditions.
+- **Real-Time Forecasting**: Integrates with **Visual Crossing API** for live weather data, displaying current conditions and temperature.
+- **Historical Data Analysis**: Uses historical weather data for training and comparison of predictive accuracy.
+- **Interactive Dashboard**: The weather predictions and historical trends are visualized using **NocoDB**, allowing users to explore the data with various graphical and tabular representations.
 
-Interactive Dashboard: Built with NocoDB to explore data visually via tables and graphs.
+### **Technologies Used**:
+- **Machine Learning**:
+  - **Random Forest Classifier** for weather classification (weather code prediction).
+  - **Random Forest Regressor** for temperature prediction.
+- **Data Visualization**:
+  - **NocoDB**: Used to create an interactive, no-code dashboard for data visualization.
+- **API Integration**:
+  - **Visual Crossing API** for fetching real-time weather data. The API provides live weather forecasts including temperature, humidity, wind speed, and weather conditions.
+- **Data Processing & Handling**:
+  - **Pandas** for data manipulation.
+  - **NumPy** for numerical operations.
+  - **Matplotlib** for visualizing predicted and actual weather data.
+- **Database**:
+  - **Supabase**: Used as the backend to store the weather predictions and real-time data.
 
-🛠️ Technologies Used:
-🔍 Machine Learning:
-RandomForestClassifier – for weather condition (code) prediction.
+### **Data Source**:
+- The historical weather data used for training and predictions was obtained from **Open-Meteo**.
+  - Weather Data Download Link: [https://open-meteo.com/](https://open-meteo.com/)
 
-RandomForestRegressor – for temperature prediction.
+---
 
-📊 Data Visualization:
-NocoDB – No-code platform for displaying weather data in dashboards.
+## **Setup Instructions**
 
-🌐 API Integration:
-Visual Crossing API – Fetches current weather metrics like temperature, humidity, and wind speed.
+### **Pre-Requisites**:
+- Python (preferably Python 3.6 or later)
+- Install the necessary libraries (pandas, scikit-learn, matplotlib, requests, supabase-py)
 
-🧮 Data Processing:
-pandas – For data manipulation.
+### **Steps to Run the Project**:
 
-numpy – For numerical operations.
+1. **Clone the Repository**:
+   - Clone the project to your local machine using:
+   ```bash
+   git clone https://github.com/your-username/weather-prediction-dashboard.git
+   ```
 
-matplotlib – For plotting predictions vs. actual values.
+2. **Install Required Libraries**:
+   - Navigate to the project directory and install the dependencies using:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-🗄️ Database:
-Supabase – Stores real-time and predicted weather data (PostgreSQL backend).
+3. **Download Weather Data**:
+   - Download the historical weather data for Delhi and Mumbai from **Open-Meteo** at [Open-Meteo](https://open-meteo.com/).
+   - Save the files as `delhi-jan-dec-2024.csv` and `mumbai-jan-dec-2024.csv` in the project directory.
 
-📁 Data Source:
-Open-Meteo – Provides historical weather datasets.
-🌐 Open-Meteo Weather Data
+4. **Supabase Integration**:
+   - Sign up and create a project on **Supabase** (if you don’t have one already).
+   - Insert your **Supabase project credentials** into the code where database connections are initialized.
+   - Ensure your Supabase table is ready to store predictions (use the table `weather_pred` for predictions and real-time data).
 
-⚙️ Setup Instructions
-✅ Pre-Requisites
-Python 3.6 or higher
+5. **Run the Weather Prediction Script**:
+   - Execute the script to train the models, make predictions, and upload data to Supabase:
+   ```bash
+   python weather_prediction.py
+   ```
 
-Required Python libraries:
+6. **View the Results in NocoDB**:
+   - After running the script, you can view the predictions and historical weather data visualized in your **NocoDB** dashboard.
+   - You can explore the predictions by visiting the NocoDB interface for your project. [Click here to view the NocoDB dashboard](https://app.nocodb.com/#/nc/gallery/8c47579d-e6ef-408e-9632-61b37373327a).
 
-pandas
+---
 
-scikit-learn
+## **Contributing**:
+If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. Ensure that your changes do not break the existing functionality and are well-documented.
 
-matplotlib
+---
 
-requests
+## **License**:
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
-supabase-py
+---
 
-🚀 Steps to Run the Project
-Clone the Repository
+## **Coders**:
+1. **Hrithik Kumar**  
+   Email: [goyalhrithik548@gmail.com](mailto:goyalhrithik548@gmail.com)
 
-bash
-Copy code
-git clone https://github.com/your-username/weather-prediction-dashboard.git
-cd weather-prediction-dashboard
-Install Dependencies
+2. **Shaik Anisah Firdaws**  
+   Email: [anisahfirdaws1810@gmail.com](mailto:anisahfirdaws1810@gmail.com)
 
-bash
-Copy code
-pip install -r requirements.txt
-Download Historical Weather Data
+---
 
-Go to Open-Meteo and download data for:
+### **Technologies Used**:
+- **Supabase**: Used for storing weather predictions and real-time weather data in a PostgreSQL database.
+- **NocoDB**: A no-code platform used to visualize the stored weather data and display it in an interactive dashboard.
+- **Visual Crossing API**: Used to fetch **real-time weather data** (such as temperature, wind speed, humidity, and weather conditions).
 
-Delhi → Save as delhi-jan-dec-2024.csv
+---
 
-Mumbai → Save as mumbai-jan-dec-2024.csv
-
-Place both files in the project root directory.
-
-Set Up Supabase
-
-Create a Supabase project.
-
-Replace placeholder credentials in the code with your Supabase keys.
-
-Ensure the database has a table named weather_pred.
-
-Run the Weather Prediction Script
-
-bash
-Copy code
-python weather_prediction.py
-View Dashboard in NocoDB
-
-Open your NocoDB dashboard.
-
-Connect it to the Supabase database.
-
-Explore the weather data via interactive graphs and tables.
-
-🤝 Contributing
-We welcome contributions! To contribute:
-
-Fork the repo
-
-Create a new branch
-
-Submit a pull request with proper documentation
-
-Make sure existing features aren't broken
-
-📄 License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-👥 Coders
-Hrithik Kumar
-📧 goyalhrithik548@gmail.com
-
-Shaik Anisah Firdaws
-📧 anisahfirdaws1810@gmail.com
+Let me know if you need further adjustments!
